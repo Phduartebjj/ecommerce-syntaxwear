@@ -1,5 +1,6 @@
-/* Reset CSS baseado no reset moderno de Andy Bell */
-/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* Modern CSS Reset by Andy Bell
+   Source: https://piccalil.li/blog/a-modern-css-reset/ */
+
 :where(html, body, div, span, applet, object, iframe,
        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
        a, abbr, acronym, address, big, cite, code,
@@ -25,12 +26,10 @@
 
 :where(body) {
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #fff;
-  color: #000;
+  text-rendering: optimizeSpeed;
 }
 
-:where(*) {
+:where(*), :where(*::before), :where(*::after) {
   box-sizing: inherit;
 }
 
@@ -44,7 +43,7 @@
 }
 
 :where(button, [type="button"], [type="reset"], [type="submit"]) {
-  appearance: button;
+  -webkit-appearance: button;
 }
 
 :where(a) {
@@ -56,19 +55,45 @@
   scroll-behavior: smooth;
 }
 
+:where(:focus-visible) {
+  outline: auto;
+}
+
 :where(ul[class], ol[class]) {
   list-style: none;
 }
 
-:where(h1, h2, h3, h4, h5, h6) {
-  font-size: inherit;
-  font-weight: inherit;
+:where(html, body) {
+  min-height: 100vh;
 }
 
 :where(body > *) {
   overflow-wrap: break-word;
 }
 
-:where(#root, #__next) {
-  isolation: isolate;
+:where(:not(svg):not(canvas):not(img):not(video):not(audio):not(embed):not(object)) {
+  max-inline-size: 100%;
+}
+
+:where(button, input, optgroup, select, textarea) {
+  color: inherit;
+}
+
+:where(table) {
+  border-collapse: collapse;
+}
+
+:where(::selection) {
+  background: #b3d4fc;
+  color: #000;
+}
+
+
+:where(table) {
+  border-collapse: collapse;
+}
+
+:where(::selection) {
+  background: #b3d4fc;
+  color: #000;
 }
