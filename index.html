@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -8,106 +8,41 @@
       content="Syntaxwear — e-commerce moderno com moda urbana e peças exclusivas."
     />
     <title>Syntaxwear | E-commerce</title>
+    <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/panel.css" />
+    <link rel="stylesheet" href="css/components/hero.css" />
+    <link rel="stylesheet" href="css/components/product-grid.css" />
+    <link rel="stylesheet" href="css/components/product-card.css" />
+    <link rel="stylesheet" href="css/components/newsletter.css" />
+    <link rel="stylesheet" href="css/components/heri.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-
     <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="site-header__brand" href="#">
-          <img src="images/logo.svg" alt="Logo da Syntaxwear" width="120" height="48" />
-        </a>
-        <nav aria-label="Navegação principal">
-          <ul class="nav__list">
-            <li><a class="nav__link" href="#">Início</a></li>
-            <li><a class="nav__link" href="#">Coleções</a></li>
-            <li><a class="nav__link" href="#">Novidades</a></li>
-            <li><a class="nav__link" href="#">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <!-- Main navigation here -->
+      </nav>
     </header>
 
-    <main id="main-content">
-      <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__content">
-            <p class="eyebrow">Coleção de verão</p>
-            <h1>Moda urbana com identidade.</h1>
-            <p>
-              Peças versáteis, confortáveis e pensadas para o seu dia a dia.
-            </p>
-            <a class="button" href="#">Ver coleção</a>
-          </div>
-          <img
-            class="hero__image"
-            src="images/banner.svg"
-            alt="Modelo usando peças da coleção Syntaxwear"
-            width="640"
-            height="480"
-          />
-        </div>
+    <main class="page-main">
+      <section class="info-panel">
+        <!-- Info panel -->
       </section>
 
-      <section class="products" aria-labelledby="products-title">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Mais vendidos</p>
-            <h2 id="products-title">Descubra nossos destaques</h2>
-          </div>
+      <section class="hero-section">
+        <!-- Hero section -->
+      </section>
 
-          <div class="product-grid">
-            <article class="product-card">
-              <img src="images/product-01.svg" alt="Camiseta urbana preta" />
-              <h3>Camiseta Urbana</h3>
-              <p>R$ 89,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-02.svg" alt="Jaqueta cinza esportiva" />
-              <h3>Jaqueta Esportiva</h3>
-              <p>R$ 199,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-03.svg" alt="Calça de sarja azul" />
-              <h3>Calça de Sarja</h3>
-              <p>R$ 129,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-04.svg" alt="Tênis branco minimalista" />
-              <h3>Tênis Minimalista</h3>
-              <p>R$ 249,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-05.svg" alt="Mochila preta funcional" />
-              <h3>Mochila Funcional</h3>
-              <p>R$ 159,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-06.svg" alt="Boné preto streetwear" />
-              <h3>Boné Streetwear</h3>
-              <p>R$ 69,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-07.svg" alt="Óculos escuros moderno" />
-              <h3>Óculos Moderno</h3>
-              <p>R$ 109,90</p>
-            </article>
-            <article class="product-card">
-              <img src="images/product-08.svg" alt="Relógio esportivo prata" />
-              <h3>Relógio Esportivo</h3>
-              <p>R$ 189,90</p>
-            </article>
-          </div>
-        </div>
+      <section class="product-grid">
+        <!-- Product grid -->
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 Syntaxwear. Todos os direitos reservados.</p>
-      </div>
+      <!-- Footer and newsletter -->
     </footer>
   </body>
 </html>
