@@ -1,5 +1,5 @@
 .header {
-    background-color: #fff;
+  background-color: #fff;
   position: fixed;
   top: 20px;
   left: 50%;
@@ -10,11 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 28px;
+  padding: 12px 20px;
 }
 
 .logo img {
-  height: 40px;
+  width: 150px;
+  height: 48px;
 }
 
 .nav-center ul {
@@ -23,13 +24,15 @@
   gap: 2.5rem;
 }
 
-.nav-center a, .nav-right a {
+.nav-center a,
+.nav-right a {
   font-size: 1.25rem;
   font-weight: 400;
 }
 
-.nav-center a:hover, .nav-right a:hover {
-color:#7c3aed
+.nav-center a:hover,
+.nav-right a:hover {
+  color: #7c3aed;
 }
 
 .nav-container {
@@ -37,7 +40,7 @@ color:#7c3aed
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  flex:1;
+  flex: 1;
   margin-left: 16rem;
 }
 
@@ -48,7 +51,7 @@ color:#7c3aed
 }
 
 .nav-right img {
-    height: 20px;
+  height: 20px;
 }
 
 .nav-right a:hover img {
