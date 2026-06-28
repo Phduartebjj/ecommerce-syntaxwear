@@ -81,8 +81,8 @@
 
 
 @media (max-width: 1280px) {
-  .headar{
-    width: calc(100% - 40px);
+  .header{
+    width: calc(100% - 50px);
   }
 
   .menu-icon {

@@ -106,3 +106,25 @@
   text-align: center;
   padding: 1.25rem 0;
 }
+
+@media (max-width:1000px){
+  .footer-top{
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .site-footer{
+    min-width: 320px;
+    max-height: 1360px;
+  }
+
+  .footer-links{
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer-top {
+  gap: 5rem;
+}
+
+}
