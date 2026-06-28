@@ -32,6 +32,12 @@
           </a>
         </h1>
       </nav>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu">
+        <img src="images/icons/hamburguer.svg"alt="">
+      </label>
+
       <nav class="nav-container">
         <nav class="nav-center" aria-label="Categorias Principais">
           <ul class="nav-list">
@@ -80,7 +86,7 @@
       </section>
 
       <section class="categories-section">
-        <div class="category-card casual ">
+        <div class="category-card casual">
           <a href="" class="category-link">
             <span class="overlay"></span>
             <span class="category-name btn btn-outline">Casual</span>
@@ -107,17 +113,15 @@
       </section>
 
       <section class="grid-section">
-         <div class="card top1">
-           <div class="top1-content">
-             <h3 class="card-title">Krypton One</h3>
-             <p class="card-subtitle">
-               Estilo Urbano com atitude
-             </p>
-             <div class="cta-group">
-               <a href="#" class="btn btn-outline">Feminimo</a>
-               <a href="#" class="btn btn-filled">Masculino</a>
-             </div>
-           </div>
+        <div class="card top1">
+          <div class="top1-content">
+            <h3 class="card-title">Krypton One</h3>
+            <p class="card-subtitle">Estilo Urbano com atitude</p>
+            <div class="cta-group">
+              <a href="#" class="btn btn-outline">Feminimo</a>
+              <a href="#" class="btn btn-filled">Masculino</a>
+            </div>
+          </div>
         </div>
         <div class="card top2"></div>
         <div class="card midL"></div>
@@ -128,7 +132,88 @@
     </main>
 
     <footer class="site-footer">
-      <!-- Footer and newsletter -->
+      <section class="footer-container">
+        <div class="footer-top">
+          <div class="footer-newsletter">
+            <div class="newsletter-content">
+              <p class="footer-title">Inscreva-se em nosso e-mail</p>
+              <form class="newsletter-form" action="#" method="post">
+                <input
+                  id="footer-email"
+                  type="email"
+                  placeholder="email@email.com"
+                />
+              </form>
+            </div>
+
+            <div class="footer-social" aria-label="Redes sociais">
+              <p>Redes sociais</p>
+              <div class="social-icons">
+                <a href="#" aria-label="Instagram">
+                  <img src="images/icons/instragam-icon.svg" alt="Instagram" />
+                </a>
+                <a href="#" aria-label="Whatsapp">
+                  <img src="images/icons/whatsapp-icon.svg" alt="Whatsapp" />
+                </a>
+                <a href="#" aria-label="Tiktok">
+                  <img src="images/icons/tiktok-icon.svg" alt="Tiktok" />
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <nav class="footer-nav" aria-label="Categorias masculinas">
+              <ul>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Esporte</a></li>
+                <li><a href="#">Moderno</a></li>
+                <li><a href="#">Futurista</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Categorias femininas">
+              <ul>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Esporte</a></li>
+                <li><a href="#">Moderno</a></li>
+                <li><a href="#">Futurista</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Outlet e novidades">
+              <ul>
+                <li><a href="#">Outlet</a></li>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Sobre a loja">
+              <ul>
+                <li><a href="#">Nossas lojas</a></li>
+                <li><a href="#">Loja física</a></li>
+                <li><a href="#">Loja online</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav" aria-label="Informações institucionais">
+              <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Missão</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <div class="footer-bottom">
+        <p>Copyright. All Rights Reserved</p>
+      </div>
     </footer>
   </body>
 </html>
