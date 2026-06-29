@@ -1,292 +1,44 @@
-# Checklist de Desenvolvimento (HTML + CSS — sem JS)
 
-Este projeto segue uma estrutura de desenvolvimento focada em HTML semântico, CSS modular e boas práticas de acessibilidade, responsividade e organização.
+# Syntaxwear — Tênis e Sneakers Online
 
----
+Projeto front-end estático que implementa a interface da loja "Syntaxwear": um layout responsivo para exibição de tênis e sneakers, com header fixo, hero, seções de categorias, grade de produtos e rodapé com newsletter.
 
-## 0) Preparação do projeto
+## Tecnologias
 
-- Criar repositório (nome do projeto, licença, README inicial)
-- Definir estrutura de pastas base:
-/css
-/images
-/icons
-/fonts
-/favicons
-/docs
+- HTML5
+- CSS3 (organizado em `css/` com variáveis e componentes)
+- Google Fonts (`Ubuntu` via `css/variables.css`)
 
+## Principais funcionalidades
 
-- Criar arquivos iniciais:
-  - `index.html`
-  - `/css/base.css`
-  - `/css/layout.css`
+- Cabeçalho fixo e responsivo com navegação principal e ícones de conta/ajuda/carrinho.
+- Seção hero com imagem de destaque e CTA.
+- Cards de categorias (Casual, Esporte, Moderno, Futurista).
+- Grid de produtos responsivo usando CSS Grid e imagens de background.
+- Rodapé com formulário de newsletter e links de navegação.
+- Botões reutilizáveis com classes `btn`, `btn-outline` e `btn-filled`.
 
-- Criar pasta de componentes CSS:
-  - `/css/components/`
+## Estrutura do projeto
 
-- Adicionar:
-  - `.editorconfig`
-  - `.gitignore` (node_modules, imagens brutas etc.)
+- `index.html` — página principal (estrutura e marcação)
+- `css/` — estilos base e componentes
+	- `variables.css` — variáveis e import da fonte
+	- `base.css` — estilos globais e classes utilitárias (`.btn`)
+	- `components/` — estilos por componente (header, hero, product-grid, footer, etc.)
+- `images/` — banners, logos, ícones e imagens de produtos
 
-- Definir design tokens em `/css/base.css`:
-  - cores
-  - tipografia
-  - espaçamentos
-  - radius
-  - sombras
+## Notas de implementação
 
-- Preparar placeholders de imagens:
-  - logo
-  - banner
-  - 6–12 produtos
+- A tipografia utiliza a família `Ubuntu` importada em `css/variables.css`.
+- O layout é responsivo com queries em componentes como `header`, `hero` e `product-grid`.
+- As imagens são referenciadas em `images/` e usadas como `background-image` em cards da grade de produtos.
 
----
+## Contribuição
 
-## 1) HTML — Esqueleto e landmarks
+- Para contribuir, crie uma issue descrevendo a sugestão ou bug e abra um pull request com mudanças claras.
 
-- Criar estrutura semântica no `index.html`:
-  - `<header>`
-  - `<nav>`
-  - `<main>`
-  - `<footer>`
+## Licença
 
-- Adicionar “skip link” para o `<main>`
-
-- Definir:
-  - `<title>`
-  - `lang`
-  - `meta viewport`
-  - `meta description`
-
-- Planejar hierarquia de headings:
-  - H1 na seção Destaque (Hero)
-  - H2 nas demais seções
-
-- Estruturar seções:
-  - Painel informativo
-  - Destaque (Hero)
-  - Grid de produtos
-  - Newsletter (no footer)
+Sem licença explícita atualmente — adicione um arquivo `LICENSE` se desejar tornar o projeto público com termos específicos.
 
 ---
-
-## 2) CSS Global (base)
-
-- Normalização/reset leve em `base.css`
-- Definir variáveis CSS (design tokens):
-  - cores
-  - fontes
-  - espaçamentos
-  - breakpoints
-
-- Tipografia global:
-  - body
-  - headings
-  - links
-  - listas
-  - parágrafos
-
-- Utilitários:
-  - `.container`
-  - `.stack-*`
-  - `.cluster`
-  - `.grid-*`
-  - `.sr-only`
-
-- Definir tabela de breakpoints:
-  - sm / md / lg / xl
-  - helpers de media queries
-
----
-
-## 3) CSS de Layout
-
-- Definir largura máxima e gutters em `layout.css`
-- Criar grids base responsivos
-- Documentar uso de:
-  - `.container`
-  - `.stack`
-  - `.cluster`
-
----
-
-## 4) Header / Menu (HTML + CSS)
-
-### HTML
-
-- Logo
-- Navegação principal
-- Ações (login / cadastro)
-
-### CSS (`/css/components/header.css`)
-
-- Nomeclatura BEM leve:
-  - `.site-header`
-  - `.nav__list`
-  - `.nav__link`
-
-- Layout com Flexbox
-- Estados:
-  - hover
-  - focus
-  - ativo
-
-- Responsividade:
-  - mobile: navegação empilhada (sem JS)
-
-- Acessibilidade:
-  - `<nav>` com lista semântica
-  - rótulos claros
-
----
-
-## 5) Painel Informativo
-
-### HTML
-
-- Seção com USP:
-  - frete
-  - devolução
-  - parcelamento
-
-### CSS (`panel.css`)
-
-- Layout com `.cluster` (ícone + texto)
-- Responsivo:
-  - empilhado no mobile
-- Garantir contraste adequado
-
----
-
-## 6) Destaque / Hero
-
-### HTML
-
-- H1
-- Subtítulo
-- CTA
-- Imagem ou mídia de destaque
-
-### CSS (`hero.css`)
-
-- Layout com Grid ou Flex
-- Possível sobreposição de texto
-- Controle de legibilidade (claro/escuro)
-- Responsividade:
-  - ajuste de tipografia por breakpoint
-
----
-
-## 7) Grid de Produtos
-
-### HTML
-
-- Lista de produtos
-- Card de produto:
-  - imagem
-  - nome
-  - preço
-  - badge opcional
-
-### CSS
-
-#### `product-grid.css`
-
-- Grid responsivo:
-  - 2 col (sm)
-  - 3 col (md)
-  - 4 col (lg+)
-
-#### `product-card.css`
-
-- Layout em coluna (Flex)
-- Espaçamentos consistentes
-- Limite de texto (2 linhas)
-- Aspect ratio:
-  - 1:1 ou 4:5
-- Estados:
-  - `--sale`
-  - `--new`
-
----
-
-## 8) Footer + Newsletter
-
-### HTML
-
-- Links institucionais
-- Ajuda / FAQ
-- Redes sociais
-- Formas de pagamento
-- Newsletter
-
-### CSS
-
-#### `footer.css`
-
-- Grid responsivo:
-  - 1–2 col (mobile)
-  - 3–4 col (desktop)
-
-#### `newsletter.css`
-
-- Label visível
-- Input + botão
-- Texto de ajuda
-
-- Responsividade:
-  - newsletter full-width no mobile
-
----
-
-## 9) Acessibilidade essencial
-
-- Apenas um H1 por página
-- Hierarquia lógica de headings
-- Alt text:
-  - imagens informativas → descritivo
-  - decorativas → `alt=""`
-- Foco visível obrigatório
-- Não remover outline sem substituto
-- Contraste mínimo AA
-- Alvos interativos ~44px
-- Formulários:
-  - labels explícitas
-  - mensagens de ajuda/erro textuais
-
----
-
-## 10) Responsividade e ajustes finais
-
-- Testar breakpoints:
-  - sm / md / lg / xl
-- Ajustar:
-  - tipografia
-  - espaçamentos
-  - gutters
-- Testar navegadores:
-  - Chrome
-  - Firefox
-  - Safari
-- Testar diferentes viewports
-
----
-
-## 11) Imagens e performance básica
-
-- Otimizar imagens:
-  - WebP / AVIF quando possível
-- Definir `width` e `height` nas imagens
-- Usar SVG para ícones quando aplicável
-- Monitorar peso total da página
-
----
-
-## 12) Organização e manutenção
-
-- Revisar nomes de classes:
-  - BEM leve + utilitários
-- Remover CSS não utilizado
-- Atualizar README com estrutura do projeto
-- Criar guia curto de convenções em `/docs`
-- Documentar design tokens e padrões CSS
